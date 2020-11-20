@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>  
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="true" />
+    
+    <package name="default" extends="struts-default">
+    	
+    </package>
+    <include file="action/Admin.xml"></include>
+    <include file="action/College.xml"></include>
+    <include file="action/Department.xml"></include>
+    <include file="action/Profession.xml"></include>
+    <include file="action/Classa.xml"></include>
+    <include file="action/ClassRoom.xml"></include>
+    <include file="action/Course.xml"></include>
+    <include file="action/Teacher.xml"></include>
+    <include file="action/Student.xml"></include>
+    <include file="action/Notice.xml"></include>
+    <include file="action/TeachTask.xml"></include>
+    <include file="action/Schedule.xml"></include>
+    <include file="action/CourseSchedule.xml"></include>
+ </struts>
+
+
+

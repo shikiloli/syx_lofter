@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>  
+    <package name="schedule" extends="default" namespace="/schedule">
+    	<action name="*">
+    	<result>/WEB-INF/content/teacher/{1}.jsp</result>
+    	</action>
+    	<action name="ScheduleShow" class="action.ScheduleAction" method="ScheduleShow">
+    		<result name="success">/WEB-INF/content/teacher/ScheduleMgr.jsp</result>
+    	</action>
+    	<action name="ScheduleShowAll" class="action.ScheduleAction" method="ScheduleShowAll">
+    		<result name="success">/WEB-INF/content/teacher/ScheduleMgr.jsp</result>
+    	</action>
+    	<action name="ScheduleInsert" class="action.ScheduleAction" method="ScheduleInsert">
+    		<result name="success">/WEB-INF/content/teacher/ScheduleMgr.jsp</result>
+    	</action>
+    	<action name="ScheduleDelete" class="action.ScheduleAction" method="ScheduleDelete">
+    		<result name="success">/WEB-INF/content/teacher/ScheduleMgr.jsp</result>
+    	</action>
+    	<action name="CollegeUpdate" class="action.CollegeAction" method="CollegeUpdate">
+    		<result name="success">/WEB-INF/content/admin/CollegeMgr.jsp</result>
+    	</action>
+    </package>
+    
+ </struts>
+
+
+

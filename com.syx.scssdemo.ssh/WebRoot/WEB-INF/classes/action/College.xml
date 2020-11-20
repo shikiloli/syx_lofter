@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>  
+    <package name="college" extends="default" namespace="/college">
+    	<action name="*">
+    	<result>/WEB-INF/content/admin/{1}.jsp</result>
+    	</action>
+    	<action name="CollegeShow" class="action.CollegeAction" method="CollegeShow">
+    		<result name="success">/WEB-INF/content/admin/CollegeMgr.jsp</result>
+    	</action>
+    	<action name="CollegeInsert" class="action.CollegeAction" method="CollegeInsert">
+    		<result name="success">/WEB-INF/content/admin/CollegeMgr.jsp</result>
+    	</action>
+    	<action name="CollegeDelete" class="action.CollegeAction" method="CollegeDelete">
+    		<result name="success">/WEB-INF/content/admin/CollegeMgr.jsp</result>
+    	</action>
+    	<action name="CollegeUpdate" class="action.CollegeAction" method="CollegeUpdate">
+    		<result name="success">/WEB-INF/content/admin/CollegeMgr.jsp</result>
+    	</action>
+    </package>
+    
+ </struts>
+
+
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts> 
+    <package name="student" extends="default" namespace="/student">
+    	<action name="*">
+    	<result>/WEB-INF/content/student/{1}.jsp</result>
+    	</action>
+    	<action name="loginAction" class="action.StudentAction" method="loginAction">
+    		<result name="success">/WEB-INF/content/student/PersonalMgr.jsp</result>
+    		<result name="error">/WEB-INF/content/student/login.jsp</result>
+    	</action>
+    	<action name="StudentPhoto" class="action.StudentPhoto" method="execute">
+    		<result name="success">/WEB-INF/content/student/PersonalMgr.jsp</result>
+    	</action>
+    	<action name="StudentShow" class="action.StudentAction" method="StudentShow">
+    		<result name="success">/WEB-INF/content/admin/StudentMgr.jsp</result>
+    	</action>
+    	<action name="StudentInsert" class="action.StudentAction" method="StudentInsert">
+    		<result name="success">/WEB-INF/content/admin/StudentMgr.jsp</result>
+    	</action>
+    	<action name="StudentDelete" class="action.StudentAction" method="StudentDelete">
+    		<result name="success">/WEB-INF/content/admin/StudentMgr.jsp</result>
+    	</action>
+    	<action name="StudentUpdate" class="action.StudentAction" method="StudentUpdate">
+    		<result name="success">/WEB-INF/content/admin/StudentMgr.jsp</result>
+    	</action>
+    	<action name="Update" class="action.StudentAction" method="Update">
+    		<result name="success">/WEB-INF/content/student/PersonalMgr.jsp</result>
+    	</action>
+    	<action name="NoticeFind" class="action.StudentAction" method="NoticeFind">
+    		<result name="success">/WEB-INF/content/student/NoticeShow.jsp</result>
+    	</action>
+    	<action name="PwdUpdate" class="action.StudentAction" method="PwdUpdate">
+    		<result name="success">/WEB-INF/content/student/PasswordMgr.jsp</result>
+    	</action>
+    	<action name="PwdReset" class="action.StudentAction" method="PwdReset">
+    		<result name="success">/WEB-INF/content/admin/StudentMgr.jsp</result>
+    	</action>
+    	<action name="Exit" class="action.StudentAction" method="Exit">
+    		<result name="success">/WEB-INF/content/student/login.jsp</result>
+    	</action>
+    </package>
+    
+ </struts>
+
+
+

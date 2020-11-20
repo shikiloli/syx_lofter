@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>  
+    <package name="admin" extends="default" namespace="/admin">
+    	<action name="*">
+    	<result>/WEB-INF/content/admin/{1}.jsp</result>
+    	</action>
+    	<action name="login" class="action.AdminAction" method="login">
+    		<result name="success">/WEB-INF/content/admin/CollegeMgr.jsp</result>
+        	<result name="error">/WEB-INF/content/admin/login.jsp</result>
+    	</action>
+    	<action name="AdminShow" class="action.AdminAction" method="AdminShow">
+    		<result name="success">/WEB-INF/content/admin/AdminMgr.jsp</result>
+    	</action>
+    	<action name="AdminInsert" class="action.AdminAction" method="AdminInsert">
+    		<result name="success">/WEB-INF/content/admin/AdminMgr.jsp</result>
+    	</action>
+    	<action name="AdminDelete" class="action.AdminAction" method="AdminDelete">
+    		<result name="success">/WEB-INF/content/admin/AdminMgr.jsp</result>
+    	</action>
+    	<action name="AdminUpdate" class="action.AdminAction" method="AdminUpdate">
+    		<result name="success">/WEB-INF/content/admin/AdminMgr.jsp</result>
+    	</action>
+    	<action name="AdminPhoto" class="action.AdminPhoto" method="execute">
+			<result name="success">/WEB-INF/content/admin/PersonalMgr.jsp</result>
+		</action>
+    	<action name="PwdReset" class="action.AdminAction" method="PwdReset">
+    		<result name="success">/WEB-INF/content/admin/AdminMgr.jsp</result>
+    	</action>
+    	<action name="PwdUpdate" class="action.AdminAction" method="PwdUpdate">
+    		<result name="success">/WEB-INF/content/admin/PasswordMgr.jsp</result>
+    	</action>
+    	<action name="Exit" class="action.AdminAction" method="Exit">
+    		<result name="success">/WEB-INF/content/admin/login.jsp</result>
+    	</action>
+    </package>
+    
+ </struts>
+
+
+

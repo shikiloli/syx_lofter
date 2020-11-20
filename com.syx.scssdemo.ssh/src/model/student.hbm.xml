@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="model">
+	<class name="Student" table="T_Student">
+		<id name="StuID" column="StuID" type="string" length="20">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="Name" column="Name" type="string" length="50"></property>
+		<property name="Sex" column="Sex" type="string" length="6"></property>
+		<property name="Birth" column="Birth" type="string" length="20"></property>
+		<property name="Password" column="Password" type="string" length="50"></property>
+		<property name="Photo" column="Photo" type="string" length="50"></property>
+		<property name="Phone" column="Phone" type="string" length="50"></property>
+		<property name="Family" column="Family" type="string" length="50"></property>
+		<property name="Remark" column="Remark" type="text"></property>
+		<many-to-one name="classa" class="Classa" lazy="false">
+			<column name="ClassID"></column>
+		</many-to-one>
+		<set name="courseSchedules" inverse="true" lazy="true">
+			<key column="StuID"></key>
+			<one-to-many class="CourseSchedule"/>
+		</set>
+	</class>
+</hibernate-mapping>

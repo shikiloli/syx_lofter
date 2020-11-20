@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts> 
+	
+    <package name="teacher" extends="default" namespace="/teacher">
+    <action name="*">
+    	<result>/WEB-INF/content/teacher/{1}.jsp</result>
+    	</action>
+    	<action name="loginAction" class="action.TeacherAction" method="loginAction">
+    		<result name="success">/WEB-INF/content/teacher/PersonalMgr.jsp</result>
+    		<result name="error">/WEB-INF/content/teacher/login.jsp</result>
+    	</action>
+    	<action name="TeacherPhoto" class="action.TeacherPhoto" method="execute">
+    		<result name="success">/WEB-INF/content/teacher/PersonalMgr.jsp</result>
+    	</action>
+    	<action name="TeacherShow" class="action.TeacherAction" method="TeacherShow">
+    		<result name="success">/WEB-INF/content/admin/TeacherMgr.jsp</result>
+    	</action>
+    	<action name="TeacherInsert" class="action.TeacherAction" method="TeacherInsert">
+    		<result name="success">/WEB-INF/content/admin/TeacherMgr.jsp</result>
+    	</action>
+    	<action name="TeacherDelete" class="action.TeacherAction" method="TeacherDelete">
+    		<result name="success">/WEB-INF/content/admin/TeacherMgr.jsp</result>
+    	</action>
+    	<action name="TeacherUpdate" class="action.TeacherAction" method="TeacherUpdate">
+    		<result name="success">/WEB-INF/content/admin/TeacherMgr.jsp</result>
+    	</action>
+    	<action name="TeacherSelect" class="action.TeacherAction" method="TeacherSelect">
+    		<result name="success">/WEB-INF/content/admin/AuditingMgr.jsp</result>
+    	</action>
+    	<action name="Update" class="action.TeacherAction" method="Update">
+    		<result name="success">/WEB-INF/content/teacher/PersonalMgr.jsp</result>
+    	</action>
+    	<action name="PwdUpdate" class="action.TeacherAction" method="PwdUpdate">
+    		<result name="success">/WEB-INF/content/teacher/PasswordMgr.jsp</result>
+    	</action>
+    	<action name="PwdReset" class="action.TeacherAction" method="PwdReset">
+    		<result name="success">/WEB-INF/content/admin/TeacherMgr.jsp</result>
+    	</action>
+    	<action name="NoticeFind" class="action.TeacherAction" method="NoticeFind">
+    		<result name="success">/WEB-INF/content/teacher/NoticeShow.jsp</result>
+    	</action>
+    	<action name="Exit" class="action.TeacherAction" method="Exit">
+    		<result name="success">/WEB-INF/content/teacher/login.jsp</result>
+    	</action>
+    </package>
+    
+ </struts>
+
+
+

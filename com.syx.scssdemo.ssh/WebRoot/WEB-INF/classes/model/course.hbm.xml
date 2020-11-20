@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="model">
+	<class name="Course" table="T_Course">
+		<id name="CourseID" column="CourseID" type="string" length="20">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="Course" column="Course" type="string" length="50"></property>
+		<property name="Crediy" column="Crediy" type="integer"></property>
+		<property name="CurriculumTime" column="CurriculumTime" type="string" length="20"></property>
+		<property name="StudyTime" column="StudyTime" type="integer"></property>		
+		<property name="Remark" column="Remark" type="text"></property>
+		<many-to-one name="profession" class="Profession" lazy="false">
+			<column name="ProfessionID"></column>
+		</many-to-one>
+		<set name="teachTasks" inverse="true" lazy="true">
+			<key column="CourseID"></key>
+			<one-to-many class="TeachTask"/>
+		</set>
+	</class>
+</hibernate-mapping>

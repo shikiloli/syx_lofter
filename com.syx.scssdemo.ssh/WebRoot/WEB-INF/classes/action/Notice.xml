@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>  
+    <package name="notice" extends="default" namespace="/notice">
+    	<action name="*">
+    	<result>/WEB-INF/content/admin/{1}.jsp</result>
+    	</action>
+    	<action name="NoticeShow" class="action.NoticeAction" method="NoticeShow">
+    		<result name="success">/WEB-INF/content/admin/NoticeInfo.jsp</result>
+    	</action>
+    	<action name="NoticeInsert" class="action.NoticeAction" method="NoticeInsert">
+    		<result name="success">/WEB-INF/content/admin/NoticeInfo.jsp</result>
+    	</action>
+    	<action name="NoticeDelete" class="action.NoticeAction" method="NoticeDelete">
+    		<result name="success">/WEB-INF/content/admin/NoticeInfo.jsp</result>
+    	</action>
+    	<action name="NoticeFind" class="action.NoticeAction" method="NoticeFind">
+    		<result name="success">/WEB-INF/content/admin/NoticeShow.jsp</result>
+    	</action>
+    	<action name="NoticeUpload" class="action.NoticeAction" method="NoticeUpload">
+    		<result name="success">/WEB-INF/content/admin/Notice.jsp</result>
+    	</action>
+    </package>
+    
+ </struts>
+
+
+

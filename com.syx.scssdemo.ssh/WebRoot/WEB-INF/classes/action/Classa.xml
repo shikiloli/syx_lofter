@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>  
+    <package name="classa" extends="default" namespace="/classa">
+    	<action name="*">
+    	<result>/WEB-INF/content/admin/{1}.jsp</result>
+    	</action>
+    	<action name="ClassaShow" class="action.ClassaAction" method="ClassaShow">
+    		<result name="success">/WEB-INF/content/admin/ClassMgr.jsp</result>
+    	</action>
+    	<action name="ClassaShowAll" class="action.ClassaAction" method="ClassaShowAll">
+    		<result name="success">/WEB-INF/content/admin/ClassMgr.jsp</result>
+    	</action>
+    	<action name="ClassaInsert" class="action.ClassaAction" method="ClassaInsert">
+    		<result name="success">/WEB-INF/content/admin/ClassMgr.jsp</result>
+    	</action>
+    	<action name="ClassaDelete" class="action.ClassaAction" method="ClassaDelete">
+    		<result name="success">/WEB-INF/content/admin/ClassMgr.jsp</result>
+    	</action>
+    	<action name="ClassaUpdate" class="action.ClassaAction" method="ClassaUpdate">
+    		<result name="success">/WEB-INF/content/admin/ClassMgr.jsp</result>
+    	</action>
+    </package>
+    
+ </struts>
+
+
+

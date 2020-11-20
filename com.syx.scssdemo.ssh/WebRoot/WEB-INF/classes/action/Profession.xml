@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>  
+    <package name="profession" extends="default" namespace="/profession">
+    	<action name="*">
+    	<result>/WEB-INF/content/admin/{1}.jsp</result>
+    	</action>
+    	<action name="ProfessionShow" class="action.ProfessionAction" method="ProfessionShow">
+    		<result name="success">/WEB-INF/content/admin/ProfessionMgr.jsp</result>
+    	</action>
+    	<action name="ProfessionShowAll" class="action.ProfessionAction" method="ProfessionShowAll">
+    		<result name="success">/WEB-INF/content/admin/ProfessionMgr.jsp</result>
+    	</action>
+    	<action name="ProfessionInsert" class="action.ProfessionAction" method="ProfessionInsert">
+    		<result name="success">/WEB-INF/content/admin/ProfessionMgr.jsp</result>
+    	</action>
+    	<action name="ProfessionDelete" class="action.ProfessionAction" method="ProfessionDelete">
+    		<result name="success">/WEB-INF/content/admin/ProfessionMgr.jsp</result>
+    	</action>
+    	<action name="ProfessionUpdate" class="action.ProfessionAction" method="ProfessionUpdate">
+    		<result name="success">/WEB-INF/content/admin/ProfessionMgr.jsp</result>
+    	</action>
+    </package>
+    
+ </struts>
+
+
+

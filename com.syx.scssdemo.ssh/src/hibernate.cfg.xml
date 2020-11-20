@@ -1,0 +1,35 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+	<property name="show_sql">true</property>
+	<property name="hbm2ddl.auto">update</property>
+	<property name="myeclipse.connection.profile"></property>
+	<property name="connection.url">
+		jdbc:sqlserver://localhost:1433;DatabaseName=db_CourseSelectionSystem
+	</property>
+	<property name="connection.username">sa</property>
+	<property name="connection.password">123456</property>
+	<property name="connection.driver_class">
+		com.microsoft.sqlserver.jdbc.SQLServerDriver
+	</property>
+	<property name="dialect">
+		org.hibernate.dialect.SQLServerDialect
+	</property>
+	<mapping resource="model/admin.hbm.xml" />
+	<mapping resource="model/classa.hbm.xml" />
+	<mapping resource="model/college.hbm.xml" />
+	<mapping resource="model/course.hbm.xml" />
+	<mapping resource="model/department.hbm.xml" />
+	<mapping resource="model/notice.hbm.xml" />
+	<mapping resource="model/profession.hbm.xml" />
+	<mapping resource="model/student.hbm.xml" />
+	<mapping resource="model/teacher.hbm.xml" />
+	<mapping resource="model/classroom.hbm.xml" />
+	<mapping resource="model/teachtask.hbm.xml" />
+	<mapping resource="model/schedule.hbm.xml" />
+	<mapping resource="model/courseschedule.hbm.xml" />
+</session-factory>
+</hibernate-configuration>

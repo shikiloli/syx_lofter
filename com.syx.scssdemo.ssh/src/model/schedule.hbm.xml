@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="model">
+	<class name="Schedule" table="T_Schedule">
+		<id name="ScheduleID" column="ScheduleID" type="integer" length="50">
+		<generator class="native"></generator>
+		</id>
+		<property name="ClassTime" column="ClassTime" type="string"></property>
+		<property name="Classfestival" column="Classfestival" type="string"></property>
+		<property name="Remark" column="Remark" type="text"></property>
+		<many-to-one name="classRoom" class="ClassRoom" column="ClassRoomID" lazy="false"/>
+		<many-to-one name="teachTask" class="TeachTask" column="TeachTaskID" lazy="false"/>
+	</class>
+</hibernate-mapping>

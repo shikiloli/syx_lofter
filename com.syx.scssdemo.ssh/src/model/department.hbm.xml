@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="model">
+	<class name="Department" table="T_Department">
+		<id name="DepartmentID" column="DepartmentID" type="string" length="20">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="DepartmentName" column="DepartmentName" type="string" length="50"></property>
+		<property name="Remark" column="Remark" type="text"></property>
+		<many-to-one name="college" class="College" lazy="false">
+			<column name="CollegeID"></column>
+		</many-to-one>
+		<set name="professions" inverse="true" lazy="true">
+			<key column="DepartmentID"></key>
+			<one-to-many class="Profession"/>
+		</set>
+	</class>
+</hibernate-mapping>

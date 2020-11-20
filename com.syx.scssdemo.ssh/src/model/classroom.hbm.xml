@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="model">
+	<class name="ClassRoom" table="T_ClassRoom">
+		<id name="ClassRoomID" column="ClassRoomID" type="string" length="50">
+		<generator class="assigned"></generator>
+		</id>
+		<property name="ClassRoomName" column="ClassRoomName" type="string"></property>
+		<property name="ClassRoomCategory" column="ClassRoomCategory" type="string"></property>
+		<property name="Remark" column="Remark" type="text"></property>
+		<set name="schedules" inverse="true" lazy="true">
+			<key column="ClassRoomID"></key>
+			<one-to-many class="Schedule"/>
+		</set>
+	</class>
+</hibernate-mapping>

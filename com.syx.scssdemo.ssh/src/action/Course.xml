@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>  
+    <package name="course" extends="default" namespace="/course">
+    	<action name="*">
+    	<result>/WEB-INF/content/admin/{1}.jsp</result>
+    	</action>
+    	<action name="CourseShow" class="action.CourseAction" method="CourseShow">
+    		<result name="success">/WEB-INF/content/admin/CourseMgr.jsp</result>
+    	</action>
+    	<action name="CourseInsert" class="action.CourseAction" method="CourseInsert">
+    		<result name="success">/WEB-INF/content/admin/CourseMgr.jsp</result>
+    	</action>
+    	<action name="CourseDelete" class="action.CourseAction" method="CourseDelete">
+    		<result name="success">/WEB-INF/content/admin/CourseMgr.jsp</result>
+    	</action>
+    	<action name="CourseUpdate" class="action.CourseAction" method="CourseUpdate">
+    		<result name="success">/WEB-INF/content/admin/CourseMgr.jsp</result>
+    	</action>
+    </package>
+    
+ </struts>
+
+
+

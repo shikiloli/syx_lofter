@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>  
+    <package name="teachTask" extends="default" namespace="/teachTask">
+    	<action name="*">
+    	<result>/WEB-INF/content/teacher/{1}.jsp</result>
+    	</action>
+    	<action name="TeachTaskShow" class="action.TeachTaskAction" method="TeachTaskShow">
+    		<result name="success">/WEB-INF/content/teacher/TeachTaskMgr.jsp</result>
+    	</action>
+    	<action name="TeachTaskInsert" class="action.TeachTaskAction" method="TeachTaskInsert">
+    		<result name="success">/WEB-INF/content/teacher/TeachTaskMgr.jsp</result>
+    	</action>
+    	<action name="TeachTaskDelete" class="action.TeachTaskAction" method="TeachTaskDelete">
+    		<result name="success">/WEB-INF/content/teacher/TeachTaskMgr.jsp</result>
+    	</action>
+    	<action name="TeachTaskSelect" class="action.TeachTaskAction" method="TeachTaskSelect">
+    		<result name="success">/WEB-INF/content/teacher/TeachTask.jsp</result>
+    	</action>
+    	<action name="TeachTaskSelect2" class="action.TeachTaskAction" method="TeachTaskSelect2">
+    		<result name="success">/WEB-INF/content/teacher/TeachTask.jsp</result>
+    	</action>
+    	<action name="AuditingT" class="action.TeachTaskAction" method="AuditingT">
+    		<result name="success">/WEB-INF/content/admin/AuditingMgr.jsp</result>
+    	</action>
+    	<action name="AuditingF" class="action.TeachTaskAction" method="AuditingF">
+    		<result name="success">/WEB-INF/content/admin/AuditingMgr.jsp</result>
+    	</action>
+    </package>
+    
+ </struts>
+
+
+

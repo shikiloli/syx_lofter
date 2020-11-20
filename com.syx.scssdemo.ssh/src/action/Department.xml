@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>  
+    <package name="department" extends="default" namespace="/department">
+    	<action name="*">
+    	<result>/WEB-INF/content/admin/{1}.jsp</result>
+    	</action>
+    	<action name="DepartmentShow" class="action.DepartmentAction" method="DepartmentShow">
+    		<result name="success">/WEB-INF/content/admin/DepartmentMgr.jsp</result>
+    	</action>
+    	<action name="DepartmentInsert" class="action.DepartmentAction" method="DepartmentInsert">
+    		<result name="success">/WEB-INF/content/admin/DepartmentMgr.jsp</result>
+    	</action>
+    	<action name="DepartmentDelete" class="action.DepartmentAction" method="DepartmentDelete">
+    		<result name="success">/WEB-INF/content/admin/DepartmentMgr.jsp</result>
+    	</action>
+    	<action name="DepartmentUpdate" class="action.DepartmentAction" method="DepartmentUpdate">
+    		<result name="success">/WEB-INF/content/admin/DepartmentMgr.jsp</result>
+    	</action>
+    </package>
+    
+ </struts>
+
+
+

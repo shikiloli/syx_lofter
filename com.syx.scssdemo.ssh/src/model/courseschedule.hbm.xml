@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="model">
+	<class name="CourseSchedule" table="T_CourseSchedule">
+		<id name="CSID" column="CSID" type="integer" length="50">
+		<generator class="native"></generator>
+		</id>
+		<property name="ScoreOne" column="ScoreOne" type="double" length="50"></property>
+		<property name="ScoreTwo" column="ScoreTwo" type="double" length="50"></property>
+		<property name="ScoreThree" column="ScoreThree" type="double" length="50"></property>
+		<property name="TotalScore" column="TotalScore" type="double" length="50"></property>
+		<many-to-one name="student" class="Student" column="StuID" lazy="false"/>
+		<many-to-one name="teachTask" class="TeachTask" column="TeachTaskID" lazy="false"/>
+	</class>
+</hibernate-mapping>
